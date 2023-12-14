@@ -1,8 +1,8 @@
 # Workflow to deploy the docker_img
-name: build_docker_img
+name: deploy_docker_img
 on: 
   workflow_run:
-    workflows: ["ci"]
+    workflows: ["build_docker_img"]
     types:
       - completed
 
