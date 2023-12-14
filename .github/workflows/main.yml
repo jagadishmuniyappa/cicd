@@ -23,5 +23,17 @@ jobs:
        with:
          name: devops-war
          path: target/devops.war
-   
+  deploy:
+   runs-on: ubuntu-latest
+   environment: prod
+   needs: build
+   steps:
+    - name: download artifact
+      uses: actions/download-artifact@v4
+      with:
+         name: devops-war
+         path: /tmp/
+    - name: display structure of files
+      run: ls -R /tmp/
+ 
      
