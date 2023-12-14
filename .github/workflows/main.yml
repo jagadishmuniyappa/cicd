@@ -1,0 +1,21 @@
+#workflow to build the environment
+name: ci
+on: 
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: checkout the repository on ubuntu runner
+       uses: actions/checkout@v4
+     - name: Install javaversion 11
+     - uses: actions/setup-java@v4
+       with: 
+         distribution: 'temurin' 
+         java-version: '11' 
+     - name: Build with maven
+       run: |
+         mvn package
+         ls -l
+     
