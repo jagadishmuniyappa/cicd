@@ -19,7 +19,7 @@ jobs:
          mvn package
          ls -l
      - name: upload artifact
-       uses: action/upload-artifact@v4
+       uses: actions/upload-artifact@v4
        with:
          name: devops-war
          path: target/devops.war
