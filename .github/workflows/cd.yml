@@ -1,0 +1,16 @@
+# Workflow to deploy the docker_img
+name: deploy_docker_img
+on: 
+  workflow_run:
+    workflows: ["ci"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: deployment using docker
+        run: |
+          sudo docker rm -f web1
+          sudo docker run -dt --name web1 -p 9000:8080 jmuniyap/myapp33: latest
