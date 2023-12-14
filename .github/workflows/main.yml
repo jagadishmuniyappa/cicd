@@ -34,6 +34,6 @@ jobs:
          name: devops-war
          path: /tmp/
     - name: display structure of artifact files
-      run: ls -R /tmp/
+      run: ls -l /tmp/
  
      
