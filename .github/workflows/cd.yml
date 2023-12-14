@@ -13,5 +13,5 @@ jobs:
       - name: deployment using docker
         run: |
           #sudo docker rm -f web1
-          sudo docker rmi -f jmuniyap/myapp33: latest
-          sudo docker run -dt --name web1 -p 9000:8080 jmuniyap/myapp33: latest
+          sudo docker rmi -f jmuniyap/myapp33:latest
+          sudo docker run -dt --name web1 -p 9000:8080 jmuniyap/myapp33:latest
