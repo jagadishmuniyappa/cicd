@@ -33,7 +33,7 @@ jobs:
       with:
          name: devops-war
          path: /tmp/
-    - name: display structure of files
+    - name: display structure of artifact files
       run: ls -R /tmp/
  
      
