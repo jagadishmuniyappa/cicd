@@ -1,5 +1,5 @@
 # Workflow to build the environment
-name: ci
+name: build_docker_img
 on: 
   push
 
@@ -37,5 +37,5 @@ jobs:
          with:
            context: .
            push: true
-           tags: gagandeepthinknyx/intel-app:latest
+           tags: jmuniyap/myapp33:latest
      
