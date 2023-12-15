@@ -1,4 +1,4 @@
-# Workflow to deploy the docker_img
+# Workflow to deploy the docker_img using playbook
 name: deploy_playbook 
 on: push
 
