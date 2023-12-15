@@ -1,0 +1,14 @@
+# Workflow to deploy the docker_img
+name: deploy_docker_img
+on: push
+
+
+jobs:
+  deploy:
+    runs-on: jag-devops
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v4.1.1
+      - name: deployment using kubernetes
+        run: |
+          sudo ansible-playbook -i /root/inv play.yml
