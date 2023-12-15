@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v4.1.1
       - name: deployment using kubernetes
         run: |
-          sudo ansible-playbook -i /root/inv play.yml
+          sudo ansible-playbook -i /root/inv /root/play.yml
