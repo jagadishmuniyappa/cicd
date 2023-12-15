@@ -9,9 +9,11 @@ on:
 jobs:
   deploy:
     runs-on: jag-devops
+    environment: prod
     steps:
-      - name: deployment using docker
+      - name: check out the code
+        uses: actions/checkout@v4.1.1
+      - name: deployment using kubernetes
         run: |
-          sudo docker rm -f web1
-          sudo docker rmi -f jmuniyap/myapp33:latest
-          sudo docker run -dt --name web1 -p 9000:8080 jmuniyap/myapp33:latest
+          kubectl apply -f deployment.yml
+          kubectl get deployments
